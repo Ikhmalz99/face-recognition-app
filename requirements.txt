@@ -62,6 +62,7 @@ rpds-py==0.23.1
 rsa==4.9
 scikit-learn==1.6.1
 scipy==1.15.2
+setuptools==65.5.1
 six==1.17.0
 smmap==5.0.2
 soupsieve==2.6
