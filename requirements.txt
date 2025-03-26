@@ -1,0 +1,10 @@
+# requirements.txt
+
+streamlit
+deepface
+mtcnn
+opencv-python
+pillow
+numpy
+scikit-learn
+tensorflow
