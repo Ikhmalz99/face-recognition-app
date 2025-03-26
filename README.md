@@ -51,6 +51,8 @@ Ensure the following files are included:
 - app.py
 - lfw.py
 - requirements.txt
+- packages.txt
+- runtime.txt
 - README.md
 
 2. Visit Streamlit Cloud and sign in with GitHub.
