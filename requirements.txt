@@ -62,7 +62,6 @@ rpds-py==0.23.1
 rsa==4.9
 scikit-learn==1.6.1
 scipy==1.15.2
-setuptools==65.5.1
 six==1.17.0
 smmap==5.0.2
 soupsieve==2.6
@@ -70,7 +69,7 @@ streamlit==1.44.0
 tenacity==9.0.0
 tensorboard==2.15.2
 tensorboard-data-server==0.7.2
-tensorflow-cpu==2.15.0
+tensorflow==2.15.0
 tensorflow-estimator==2.15.0
 tensorflow-intel==2.15.0
 tensorflow-io-gcs-filesystem==0.31.0
