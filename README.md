@@ -16,11 +16,13 @@ This project demonstrates a complete face recognition system using the **LFW dat
 
 ```
 face-recognition-app/
-├── app.py            # Streamlit GUI for face verification
-├── lfw.py            # Model training, preprocessing, evaluation
-├── requirements.txt  # Python dependencies
-├── packages.txt 
-└── README.md         # Project documentation
+face-recognition-app/
+├── app.py             # Streamlit GUI
+├── lfw.py             # Preprocessing and evaluation
+├── requirements.txt   # Dependencies (DeepFace, Streamlit, etc.)
+├── packages.txt       # System-level packages (e.g. distutils, libGL)
+├── runtime.txt        # Python version pin (3.10.13)
+└── README.md          # Project instructions
 ```
 
 ---
