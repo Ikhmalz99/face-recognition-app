@@ -63,7 +63,7 @@ def load_images(dataset_path, limit_people=30, limit_images_per_person=2, augmen
                     print(f" Failed to process {file}: {e}")
     return data
 
-# === Evaluate the model with only verification ===
+# === Evaluate the model with verification ===
 def evaluate_model(data, threshold=0.6):
     y_true, y_pred = [], []
 
