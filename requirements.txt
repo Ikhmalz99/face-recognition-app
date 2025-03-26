@@ -19,7 +19,7 @@ gdown==5.2.0
 gitdb==4.0.12
 GitPython==3.1.44
 google-auth==2.38.0
-google-auth-oauthlib==1.0.0
+google-auth-oauthlib==1.2.1
 google-pasta==0.2.0
 grpcio==1.71.0
 gunicorn==23.0.0
@@ -30,7 +30,7 @@ Jinja2==3.1.6
 joblib==1.4.2
 jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
-keras==2.14.0
+keras==2.15.0
 libclang==18.1.1
 lz4==4.4.3
 Markdown==3.7
@@ -67,10 +67,11 @@ smmap==5.0.2
 soupsieve==2.6
 streamlit==1.44.0
 tenacity==9.0.0
-tensorboard==2.14.1
+tensorboard==2.15.2
 tensorboard-data-server==0.7.2
-tensorflow==2.14.0
-tensorflow-estimator==2.14.0
+tensorflow==2.15.0
+tensorflow-estimator==2.15.0
+tensorflow-intel==2.15.0
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.5.0
 threadpoolctl==3.6.0
