@@ -60,6 +60,8 @@ requests-oauthlib==2.0.0
 retina-face==0.0.17
 rpds-py==0.23.1
 rsa==4.9
+scikit-learn==1.6.1
+scipy==1.15.2
 six==1.17.0
 smmap==5.0.2
 soupsieve==2.6
@@ -72,6 +74,7 @@ tensorflow-estimator==2.15.0
 tensorflow-intel==2.15.0
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.5.0
+threadpoolctl==3.6.0
 toml==0.10.2
 tornado==6.4.2
 tqdm==4.67.1
