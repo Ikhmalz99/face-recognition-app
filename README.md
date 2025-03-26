@@ -32,7 +32,8 @@ Run Locally
 Start the Streamlit app:
 streamlit run app.py
 
-# Deployment (Streamlit Cloud)
+```
+## Deployment (Streamlit Cloud)
 You can easily deploy this app using Streamlit Cloud.
 
 Steps:
