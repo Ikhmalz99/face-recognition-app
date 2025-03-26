@@ -1,9 +1,11 @@
 # requirements.txt
 
+# requirements.txt
 streamlit==1.31.1
 deepface==0.0.79
 mtcnn==0.1.1
 opencv-python-headless==4.8.0.76
 pillow==10.2.0
-numpy==1.26.4
-tensorflow-cpu==2.11.0
+numpy==1.24.4
+tensorflow==2.15.0
+setuptools==65.5.0
