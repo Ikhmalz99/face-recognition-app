@@ -67,7 +67,7 @@ smmap==5.0.2
 soupsieve==2.6
 streamlit==1.44.0
 tenacity==9.0.0
-tensorboard==2.15.2
+tensorboard==2.14.1
 tensorboard-data-server==0.7.2
 tensorflow==2.14.0
 tensorflow-estimator==2.14.0
