@@ -16,7 +16,6 @@ This project demonstrates a complete face recognition system using the **LFW dat
 
 ```
 face-recognition-app/
-face-recognition-app/
 ├── app.py             # Streamlit GUI
 ├── lfw.py             # Preprocessing and evaluation
 ├── requirements.txt   # Dependencies (DeepFace, Streamlit, etc.)
