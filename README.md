@@ -21,6 +21,9 @@ face-recognition-app/
 ├── requirements.txt  # Python dependencies
 └── README.md         # Project documentation
 ```
+
+---
+
 ## Installation
 
 Make sure Python **3.8+** is installed.
@@ -33,6 +36,9 @@ Start the Streamlit app:
 streamlit run app.py
 
 ```
+
+---
+
 ## Deployment (Streamlit Cloud)
 You can easily deploy this app using Streamlit Cloud.
 
