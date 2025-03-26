@@ -35,9 +35,6 @@ streamlit run app.py
 # Deployment (Streamlit Cloud)
 You can easily deploy this app using Streamlit Cloud.
 
-☁️ Deployment (Streamlit Cloud)
-You can easily deploy this app using Streamlit Cloud.
-
 Steps:
 1. Push your code to GitHub
 Ensure the following files are included:
