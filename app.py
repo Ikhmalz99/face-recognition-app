@@ -5,6 +5,7 @@ import numpy as np
 import cv2
 from mtcnn.mtcnn import MTCNN
 import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # === Preprocessing functions (from lfw.py) ===
 def align_face(image_np):
