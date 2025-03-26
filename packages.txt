@@ -1,1 +1,1 @@
-python3-distutils
+libgl1-mesa-glx
