@@ -79,7 +79,7 @@ if img1_file and img2_file:
 
         # Average results
         avg_distance = (res1["distance"] + res2["distance"]) / 2
-        match = avg_distance < 0.4  # or any threshold you like
+        match = avg_distance < 0.3  
 
         st.success("Verification Result (with Augmentation)")
         st.write(f"**Match:** {match}")
