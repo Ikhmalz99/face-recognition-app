@@ -19,6 +19,7 @@ face-recognition-app/
 ├── app.py            # Streamlit GUI for face verification
 ├── lfw.py            # Model training, preprocessing, evaluation
 ├── requirements.txt  # Python dependencies
+├── packages.txt 
 └── README.md         # Project documentation
 ```
 
