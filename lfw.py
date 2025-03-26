@@ -27,7 +27,7 @@ def normalize_image(image):
 def augment_image(image):
     return np.fliplr(image)
 
-# === Step 1: Load and preprocess images ===
+# === Load and preprocess images ===
 def load_images(dataset_path, limit_people=30, limit_images_per_person=2, augment=True):
     data = {}
     subdirs = sorted(os.listdir(dataset_path))[:limit_people]
@@ -53,10 +53,9 @@ def load_images(dataset_path, limit_people=30, limit_images_per_person=2, augmen
                     if subdir not in data:
                         data[subdir] = []
 
-                    data[subdir].append((face, file))  # include filename
+                    data[subdir].append((face, file))
                     count += 1
 
-                    # Augmentation (horizontal flip)
                     if augment:
                         data[subdir].append((augment_image(face), f"aug_{file}"))
 
@@ -64,24 +63,7 @@ def load_images(dataset_path, limit_people=30, limit_images_per_person=2, augmen
                     print(f" Failed to process {file}: {e}")
     return data
 
-# === Step 2: Recognition Function ===
-def recognize_face(image_np, db_path="C:/face_recognition/lfw_dataset/lfw-deepfunneled"):
-    try:
-        result = DeepFace.find(img_path=image_np, db_path=db_path, model_name='VGG-Face', enforce_detection=False)
-        if len(result[0]) > 0:
-            top_match = result[0].iloc[0]
-            name = os.path.basename(os.path.dirname(top_match['identity']))
-            distance = top_match['VGG-Face_cosine']
-            print(f"Recognized as: {name} (Distance: {distance:.4f})")
-            return name, distance
-        else:
-            print("No match found.")
-            return "Unknown", None
-    except Exception as e:
-        print(f"Recognition error: {e}")
-        return "Error", None
-
-# === Step 3: Evaluate the model ===
+# === Evaluate the model with only verification ===
 def evaluate_model(data, threshold=0.6):
     y_true, y_pred = [], []
 
@@ -90,13 +72,6 @@ def evaluate_model(data, threshold=0.6):
         if len(images) >= 2:
             for (img1, name1), (img2, name2) in combinations(images, 2):
                 try:
-                    # Recognition (before verification)
-                    print(f"\nRecognizing face from {name1}:")
-                    recognize_face(img1)
-                    print(f"Recognizing face from {name2}:")
-                    recognize_face(img2)
-
-                    # Verification
                     result = DeepFace.verify(img1, img2, model_name='VGG-Face', enforce_detection=False)
                     print(f"[True Match] {name1} vs {name2} → Match: {result['verified']} | Distance: {result['distance']:.4f}")
                     y_true.append(1)
@@ -111,11 +86,6 @@ def evaluate_model(data, threshold=0.6):
             try:
                 img1, name1 = data[keys[i]][0]
                 img2, name2 = data[keys[j]][0]
-
-                print(f"\nRecognizing face from {name1}:")
-                recognize_face(img1)
-                print(f"Recognizing face from {name2}:")
-                recognize_face(img2)
 
                 result = DeepFace.verify(img1, img2, model_name='VGG-Face', enforce_detection=False)
                 print(f"[False Match] {name1} vs {name2} → Match: {result['verified']} | Distance: {result['distance']:.4f}")
