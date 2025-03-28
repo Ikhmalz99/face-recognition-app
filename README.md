@@ -1,6 +1,8 @@
 # face-recognition-app
 Face recognition system using DeepFace and Streamlit
 
+--- 
+
 # Face Recognition App using DeepFace and Streamlit
 
 This project demonstrates a complete face recognition system using the **LFW dataset**, **DeepFace (VGG-Face model)**, and a **Streamlit GUI**. It includes:
@@ -28,16 +30,62 @@ face-recognition-app/
 
 ## Installation
 
-Make sure Python **3.8+** is installed.
+Make sure Python **3.8+** is installed. Then run:
 
 ```bash
+# Clone the repository (optional if running locally)
+git clone https://github.com/ikhmalz99/face-recognition-app.git
+cd face-recognition-app
+
+# Install dependencies
 pip install -r requirements.txt
-
-Run Locally
-Start the Streamlit app:
-streamlit run app.py
-
 ```
+
+---
+
+## Run Locally
+
+Start the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Model Evaluation (lfw.py)
+The lfw.py script loads images from the LFW dataset, applies preprocessing (face alignment, normalization, and optional augmentation), and evaluates the model using the VGG-Face model from DeepFace.
+
+It computes:
+
+- Cosine distances between image pairs
+- Accuracy, Precision, Recall, F1-score
+- Threshold is customizable (default = 0.3).
+
+---
+
+## Evaluation Sample Output
+The lfw.py script evaluates face recognition performance across pairs of images using VGG-Face:
+
+--- EVALUATION RESULTS ---
+Accuracy : 0.9709
+Precision: 0.8736
+Recall   : 0.9500
+F1 Score : 0.9102
+
+---
+
+## GUI Features (app.py)
+The Streamlit GUI allows:
+
+- Uploading two face images
+- Face detection with bounding boxes
+- Normalization + horizontal flip augmentation
+- Face verification using DeepFace.verify() (average of original and augmented comparison)
+- Displays:
+1. Match or Not
+2. Distance scores
+3. Detected faces with name label overlay
 
 ---
 
