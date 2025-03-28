@@ -112,12 +112,3 @@ Ensure the following files are included:
 - Streamlit will automatically install the dependencies and launch your app.
 
 Note: If you're using large datasets (like LFW), avoid uploading the whole dataset. Instead, upload your own images during runtime, or store datasets externally (e.g., Google Drive or a cloud bucket).
-
----
-
-## Demo Screenshot
-
-Below is a preview of the face verification GUI with bounding boxes and labels:
-
-![Demo](https://github.com/ikhmalz99/face-recognition-app/raw/main/demo_screenshot.png)
-
