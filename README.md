@@ -68,10 +68,10 @@ It computes:
 The lfw.py script evaluates face recognition performance across pairs of images using VGG-Face:
 
 --- EVALUATION RESULTS ---
-Accuracy : 0.9709
-Precision: 0.8736
-Recall   : 0.9500
-F1 Score : 0.9102
+- Accuracy : 0.9709
+- Precision: 0.8736
+- Recall   : 0.9500
+- F1 Score : 0.9102
 
 ---
 
